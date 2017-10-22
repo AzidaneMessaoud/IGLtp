@@ -4,7 +4,7 @@ public class VectorHelper {
 	/**
      * 
      * @param tab tableau d'entiers 
-     * @return tab tableau après avoir appliqué une fonction pour les éléments du tableau en paramètres 
+     * @return tab tableau aprÃ¨s avoir appliquÃ© une fonction pour les Ã©lÃ©ments du tableau en paramÃ¨tres 
      */
     
     public int[] fonction(int[] tab){
@@ -21,7 +21,7 @@ public class VectorHelper {
     /**
      * 
      * @param tab tableau d'entier 
-     * @return  tab tabealu retourné après avoir trié les éléments du tableau passé en paramètres
+     * @return  tab tabealu retournÃ© aprÃ¨s avoir triÃ© les Ã©lÃ©ments du tableau passÃ© en paramÃ¨tres
      */
     public int[] trie(int[] tab){
 		boolean permut = true ; 
@@ -41,6 +41,7 @@ public class VectorHelper {
 		}		
 		return tab ; 
 	}
+
     
     
 
