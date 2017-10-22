@@ -87,5 +87,30 @@ public class VectorHelper {
 	}	
 
 	
+
+	/**
+	 * Fonction qui retourne le max et le min dans un vecteur
+	 * @author Imadovic
+	 * @param tab
+	 * @return result un tableau de deux cases qui contient le max et le min
+	 */
+	public static int[] max_min(int[] tab){
+		
+		int[] result=new int[2];
+		
+		result[0]=result[1]=tab[0];
+		
+		for(int i=0;i<tab.length;i++){
+			
+			if(tab[i]<result[0]) result[0]=tab[i];
+			if(tab[i]>result[1]) result[1]=tab[i];
+			
+		}
+		
+		return result;		
+		
+	}	
+
+	
 	
 }
