@@ -4,7 +4,7 @@ public class VectorHelper {
 	/**
      * 
      * @param tab tableau d'entiers 
-     * @return tab tableau après avoir appliqué une fonction pour les éléments du tableau en paramètres 
+     * @return tab tableau aprÃ¨s avoir appliquÃ© une fonction pour les Ã©lÃ©ments du tableau en paramÃ¨tres 
      */
     
     public int[] fonction(int[] tab){
@@ -21,7 +21,7 @@ public class VectorHelper {
     /**
      * 
      * @param tab tableau d'entier 
-     * @return  tab tabealu retourné après avoir trié les éléments du tableau passé en paramètres
+     * @return  tab tabealu retournÃ© aprÃ¨s avoir triÃ© les Ã©lÃ©ments du tableau passÃ© en paramÃ¨tres
      */
     public int[] trie(int[] tab){
 		boolean permut = true ; 
@@ -41,6 +41,77 @@ public class VectorHelper {
 		}		
 		return tab ; 
 	}
+
+    
+    
+
+	/** 
+	 * Fonction qui fait la somme de deux vecteurs et retourne le resultat dans un vecteur
+	 *       Si il les tableaux sont de tailles differentes il y aura une exception
+	 *@author Imadovic
+	 * @param tab1
+	 * @param tab2
+	 * @return result un tabelau qui est le resultat de la somme des deux tableaux en entrees
+	 * @throws LengthException
+	 * 
+	 *
+	 */
+	public static int[] sommer(int[] tab1,int[] tab2) throws LengthException{
+		
+		if(tab1.length!=tab2.length) throw new LengthException("Les tableaux sont"
+				+ " de tailles differentes");
+		
+		int[] result=new int[tab1.length];
+		
+		for(int i=0;i<tab1.length;i++)  result[i]=tab1[i]+tab2[i];
+		
+		return result;		
+		
+	}
+	
+
+	/**
+	 * Fonction qui inverse les elements d'un tableau
+	 * @author Imadovic
+	 * @param tab le tableau qu'on veut inverser 
+	 * @return result le tableau inversee
+	 */
+	
+	public static int[] inverser(int[] tab){
+		
+		int[] result=new int[tab.length];
+		
+		for(int i=0;i<tab.length;i++) result[i]=tab[tab.length-i-1];
+		
+		return result;		
+		
+	}	
+
+	
+
+	/**
+	 * Fonction qui retourne le max et le min dans un vecteur
+	 * @author Imadovic
+	 * @param tab
+	 * @return result un tableau de deux cases qui contient le max et le min
+	 */
+	public static int[] max_min(int[] tab){
+		
+		int[] result=new int[2];
+		
+		result[0]=result[1]=tab[0];
+		
+		for(int i=0;i<tab.length;i++){
+			
+			if(tab[i]<result[0]) result[0]=tab[i];
+			if(tab[i]>result[1]) result[1]=tab[i];
+			
+		}
+		
+		return result;		
+		
+	}	
+
 	
 	
 }
