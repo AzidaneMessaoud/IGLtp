@@ -68,5 +68,24 @@ public class VectorHelper {
 		
 	}
 	
+
+	/**
+	 * Fonction qui inverse les elements d'un tableau
+	 * @author Imadovic
+	 * @param tab le tableau qu'on veut inverser 
+	 * @return result le tableau inversee
+	 */
+	
+	public static int[] inverser(int[] tab){
+		
+		int[] result=new int[tab.length];
+		
+		for(int i=0;i<tab.length;i++) result[i]=tab[tab.length-i-1];
+		
+		return result;		
+		
+	}	
+
+	
 	
 }
